@@ -1,13 +1,13 @@
-# Lightweight React Template for KAVIA
+# WriteEase Platform
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+WriteEase is a comprehensive blog post creation and management platform designed to help writers create, publish, and share their content easily.
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- **Modern Dashboard**: Get an overview of your writing activities and statistics
+- **Post Editor**: Create and edit blog posts with a user-friendly interface
+- **Post Management**: View, filter, and manage all your blog posts in one place
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
 
 ## Getting Started
 
@@ -24,59 +24,44 @@ Launches the test runner in interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder.
 
-## Customization
+## Project Structure
 
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+```
+src/
+  ├── components/
+  │   ├── common/        # Reusable UI components
+  │   │   ├── Button.js
+  │   │   ├── Card.js
+  │   │   ├── EmptyState.js
+  │   │   └── LoadingSpinner.js
+  │   └── layout/        # Layout components
+  │       ├── Footer.js
+  │       ├── Header.js
+  │       ├── MainLayout.js
+  │       └── Sidebar.js
+  ├── pages/             # Page components
+  │   ├── Dashboard.js
+  │   ├── PostEditor.js
+  │   └── PostsList.js
+  ├── App.css            # Main styles
+  ├── App.js             # Main application component
+  ├── index.css          # Global styles
+  └── index.js           # Application entry point
 ```
 
-### Components
+## Technologies Used
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+- React
+- React Router
+- CSS (No additional UI frameworks)
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+## Future Enhancements
 
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Rich text editor integration
+- Image upload functionality
+- User authentication
+- Categories and tags management
+- Analytics and statistics
+- Social sharing
