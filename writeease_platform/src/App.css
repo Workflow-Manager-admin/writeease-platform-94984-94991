@@ -690,6 +690,190 @@ a:hover {
   color: var(--text-secondary);
 }
 
+/* Common components styles */
+
+/* Empty State */
+.empty-state {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.empty-state-title {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.empty-state-message {
+  color: var(--text-secondary);
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+}
+
+/* Loading Spinner */
+.loading-spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.loading-spinner {
+  display: inline-block;
+  position: relative;
+}
+
+.spinner-small {
+  width: 24px;
+  height: 24px;
+}
+
+.spinner-medium {
+  width: 40px;
+  height: 40px;
+}
+
+.spinner-large {
+  width: 60px;
+  height: 60px;
+}
+
+.spinner-inner {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  animation: spinner-animation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--primary-color) transparent transparent transparent;
+}
+
+@keyframes spinner-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-message {
+  margin-top: 15px;
+  color: var(--text-secondary);
+}
+
+/* Button component */
+.writeease-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3F56C7;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(79, 106, 245, 0.05);
+}
+
+.btn-text {
+  background-color: transparent;
+  color: var(--primary-color);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-text:hover {
+  text-decoration: underline;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.btn-medium {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-large {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+.btn-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+/* Card component */
+.writeease-card {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .dashboard-stats {
